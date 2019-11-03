@@ -4,6 +4,8 @@
 
 <p align="center">微信小程序（wechat-weapp/wechat-wxapp）开发手册</p>
 
+[小程序开发手册 github](https://github.com/MatrixAge/wxapp-tutorial)
+
 从工作到现在，我已经累计写了超过6个小程序，总结以及探索到了许多便于开发的解决方案，在这里分享给大家。
 
 ### 编码规范
