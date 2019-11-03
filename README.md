@@ -38,6 +38,7 @@ mac `sudo npm i wxss-cli -g`
 使用终端（CMD）进入到项目目录，执行 `wxss .`，`.`表示当前目录。即可看到less文件将被编译成同名的wxss文件。
 
 ![img_1][https://s2.ax1x.com/2019/11/03/KjE3Js.png]
+
 ![img_2][https://s2.ax1x.com/2019/11/03/KjE1ij.png]
 
 ### 使用CSS原生变量
