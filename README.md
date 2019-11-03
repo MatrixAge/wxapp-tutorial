@@ -1,7 +1,8 @@
-<p align="left"><a href="#" target="_blank" rel="noopener noreferrer"><img width="200" src="https://s2.ax1x.com/2019/11/03/KjVWj0.png" alt="atom.css logo"></a></p>
+<p align="center"><a href="#" target="_blank" rel="noopener noreferrer"><img width="200" src="https://s2.ax1x.com/2019/11/03/KjVWj0.png" alt="logo"></a></p>
 
-# wxapp-tutorial
-微信小程序（wechat-weapp/wechat-wxapp）开发手册
+<p align="center">wxapp-tutorial</p>
+
+<p align="center">微信小程序（wechat-weapp/wechat-wxapp）开发手册</p>
 
 从工作到现在，我已经累计写了超过6个小程序，总结以及探索到了许多便于开发的解决方案，在这里分享给大家。
 
