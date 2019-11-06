@@ -10,13 +10,13 @@
 
 ### 编码规范
 
-#### 缘由
+缘由
 
 编码规范应放在首位。当一个项目需要多个人同时进行编码时，编码规范尤为重要，当我看见我编写的代码里被其他人写的其他风格的代码“污染”了时，那感觉像吃了屎一样。这就是为什么我要求团队有一个统一的代码规范，这会极大地提升代码的可读性，以及协同开发的开发效率。
 
 不过现实是，即便开发之前已经订好了规范，总有人在不经意间去在项目里“大展拳脚”，体现自己的独特性，这个时候就需要代码review了。在国外，开发工作并不是最繁琐的，最繁琐的是代码review，Google、Microsoft这些建立在代码上的“帝国”都有一套成熟完善的代码review机制，这足以说明对于建立在代码上的“帝国”而言，编码规范在某种程度上就相当于法律，严酷的惩罚将每个开发人员的“邪念”压制住，这是我们应该了解和学习的。
 
-#### 规范
+规范
 
 文件命名：文件及文件夹统一使用下划线命名，比如`goods_detail.wxml`，不使用中横线的原因是其严重影响可读性。
 
@@ -24,7 +24,7 @@
 
 变量命名：变量统一使用下划线命名，比如`goods_coupon`，对于方法内的特殊私有变量，使用下划线开头，比如`const _that = this`，对于系统级别的变量，采用大写下划线命名，比如`MAX_VALUE`。
 
-方法命名：方法统一使用驼峰命名，比如`GetUserInfo`，私有方法使用下划线开头的驼峰命名，比如`_onClose`，在wxs文件中定义的全局方法使用大写的下划线命名，比如：`FORMAT_PRICE`。
+方法命名：方法统一使用驼峰命名，比如`getUserInfo`，私有方法使用下划线开头的驼峰命名，比如`_onClose`，在wxs文件中定义的全局方法使用大写的下划线命名，比如：`FORMAT_PRICE`。
 
 其他：在js文件中，省略语句后面分号，提升可读性。对于使用次数不超过两次的值，不单独设置变量。在方法中，对于不同类型的语句，使用空行分隔，便于阅读。CSS属性排列顺序为：绝对定位>flex定位>float定位>width/height>padding/margin>border>background>font相关>特殊属性。
 
@@ -32,13 +32,13 @@
 
 ### 借助wxss-cli在小程序中使用less
 
-#### 安装
+安装
 
 win `npm i wxss-cli -g` 
 
 mac `sudo npm i wxss-cli -g`
 
-#### 使用
+使用
 
 使用终端（CMD）进入到项目目录，执行 `wxss .`，`.`表示当前目录。即可看到less文件将被编译成同名的wxss文件。
 
@@ -48,11 +48,11 @@ mac `sudo npm i wxss-cli -g`
 
 ### 使用CSS原生变量
 
-#### 场景
+场景
 
 有时候我们与一些不适用less进行开发的小伙伴进行协同，需要统一变量，这个时候CSS原生变量就派上了用场。
 
-#### 定义
+定义
 
 app.wxss
 
@@ -63,7 +63,7 @@ page{
 }
 ```
 
-#### 使用
+使用
 
 index.wxss
 
@@ -81,7 +81,7 @@ index.wxss
 
 ### 使用defineProperty定义app.globalData 构建全局数据中心
 
-#### 缘由
+缘由
 
 有时，我们会遇到一些很特殊的需求，比如需要在自定义的tabbar上与页面进行交互，而微信的自定义tabbar又没法使用triggerEvent（在页面里不需要引用tabbar），这个时候就需要借助`const app = getApp()`来实现类似于数据中心的功能。
 
@@ -170,11 +170,11 @@ watchOrders () {
 
 ### 使用wxs文件定义模板filter
 
-#### 缘由
+缘由
 
 写过Vue的同学知道，在Vue里有一个特别方便的东西，就是filter，它可以很方便地处理模板变量，尤其是在循环数组时，但小程序并没有直接提供相关功能，其实我们可以借助小程序的wxs来实现（目前wxs对ES6的支持有限，许多高级特性都无法使用，比如Object、Array）。
 
-#### 实现
+实现
 
 app.wxs
 
@@ -196,7 +196,7 @@ module.exports = {
 }
 ```
 
-#### 使用
+使用
 
 cart.wxml
 
@@ -211,25 +211,25 @@ cart.wxml
 
 ### 使用atom.css配合vs code插件IntelliSense for CSS class names in HTML快速出页面
 
-#### 缘由
+缘由
 
 由于小程序体积限制（2M），在小程序中基本上无法使用那种大而全UI框架，而这个时候CSS框架似乎是更好的选择，这里推荐使用[atom.css](https://github.com/MatrixAge/atom.css)。
 
-#### 安装
+安装
 
 `npm i @verts/atom.css --save`
 
-#### 使用
+使用
 
 然后复制里面的`atom-miniapp.min.wxss`文件到项目目录即可。如果要在less中使用，将`atom-miniapp.min.wxss`更改为`atom-miniapp.min.less`即可。配合vscode使用时需要安装`IntelliSense for CSS class names in HTML`，并将atom.css项目文件夹引入到vscode中，让上述插件将atom.css的所有class缓存到vscode中（wxss 插件无法识别，故无法缓存）。
 
-#### 效果
+效果
 
 ![img_3](https://s2.ax1x.com/2019/11/03/KjE8Wn.png)
 
 ### 使用async包装wx.request 简单实现拦截器的功能
 
-#### 实现
+实现
 
 request.js
 
@@ -267,7 +267,7 @@ export const post = async (url, data, header) => {
 
 ```
 
-#### 使用
+使用
 
 ```
 import API from '../../utils/api'
@@ -278,11 +278,11 @@ export const Service_getGoodsDetail = (data) => get(API.API_getGoodsDetail, data
 
 ### 集中管理api接口
 
-#### 缘由 
+缘由 
 
 在项目进行的过程中，由于需求随时会产生变化，所以接口也可能会变化，这个时候就需要统一管理和配置接口，并保持接口的“无状态”，便于后期开发和维护。API命名格式为：`API_[methodtype][Someone][Do][Something]`
 
-#### 实现
+实现
 
 api.js
 
@@ -312,11 +312,11 @@ export default API
 
 ### 使用mark对长列表做事件代理
 
-#### 缘由
+缘由
 
 过去我们使用Jquery，很容易通过on方法实现列表中的子项的操作进行代理操作，我们称之为事件委托。但在小程序中如何实现这一点呢？除了使用`data`-，小程序提供给了我们一个比`data-`更加好用的方案——mark。
 
-#### 使用
+使用
 
 coupon.wxml
 
@@ -371,11 +371,11 @@ _that.setData(
 
 ### 使用recycle-view进行长列表渲染优化
 
-#### 缘由
+缘由
 
 之前做过一个新闻+购物的小程序，由于首页滚动列表的图片内容比较多，滚动加载很多条之后就会出现卡顿甚至直接卡出微信的情况，后来通过使用一些第三方的长列表优化插件优化了一下，至少不会直接卡出微信了，微信现在有一个官方的长列表优化方案，那就是revcycle-view，使用recycle-view能够极大地节省内存，同时提升用户体验，在angular7中，该功能已被集成到angular官方sdk中，而在react中，也有着很多虚拟滚动的方案，Facebook的Instagram Web端的PWA应用很多地方都用到了虚拟滚动。
 
-#### 使用
+使用
 
 index.wxml
 
@@ -450,11 +450,11 @@ getGoodsData () {
 
 ### 使用watch来实现dialog动效
 
-#### 缘由
+缘由
 
 之前写一个商城的时候，研究淘宝的商品属性选择弹窗的动效是一个什么过程，然后如何实现。过程如下：点击选择属性/购买/加入购物车按钮 => 蒙版层占满整个屏幕，然后渐渐显现出来，与此同时，下方的窗口从底部渐渐滑出。OK，其实这个过程很简单，点击按钮的时候，弹窗（占满整个屏幕）其实以及出现了，但是要等待蒙版层的背景颜色从transparent变为rgba(0, 0, 0, 0.6)，同时也在等待弹窗内容从transform:translate(-100%)变为transform:translate(0)。这个时候需要用到小程序官方开源的一个插件：[miniprogram-computed](https://developers.weixin.qq.com/miniprogram/dev/extended/utils/computed.html)
 
-#### 实现
+实现
 
 Dialog.wxml
 ```
@@ -629,7 +629,7 @@ dialog.less
 
 ### 自定义顶部NavBar
 
-#### 缘由
+缘由
 
 现在有很多商城app都会有在顶部NavBar上放各种“东西”比如搜索框的需求，但是NavBar上的胶囊又没办法自定义，这就导致NavBar上的搜索框或是其他元素会与胶囊错位，看起来效果很差，详情可看“网易严选小程序”，但是其实是有办法做到顶部NavBar完美布局的，这里就要用到一个获取胶囊定位以及尺寸的api [wx.getMenuButtonBoundingClientRect()
 ](https://developers.weixin.qq.com/miniprogram/dev/api/ui/menu/wx.getMenuButtonBoundingClientRect.html)，通过这个api，然后使用`res.statusBarHeight`这个变量，我们可以做很多事情。不过经过测试，目前已知在小米的一些型号的全面屏手机上，高度会有略微的偏移，需要做一定的适配。
@@ -642,7 +642,7 @@ wx.getSystemInfo({
 })
 ```
 
-#### 实现
+实现
 
 具体实现我就不写了，等有时间抽空把组件重构一次后再分享给大家，下面写部分关键代码：
 
