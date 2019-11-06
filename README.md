@@ -24,7 +24,7 @@
 
 变量命名：变量统一使用下划线命名，比如`goods_coupon`，对于方法内的特殊私有变量，使用下划线开头，比如`const _that = this`，对于系统级别的变量，采用大写下划线命名，比如`MAX_VALUE`。
 
-方法命名：方法统一使用驼峰命名，比如`GetUserInfo`，私有方法使用下划线开头的驼峰命名，比如`_onClose`，在wxs文件中定义的全局方法使用大写的下划线命名，比如：`FORMAT_PRICE`。
+方法命名：方法统一使用驼峰命名，比如`getUserInfo`，私有方法使用下划线开头的驼峰命名，比如`_onClose`，在wxs文件中定义的全局方法使用大写的下划线命名，比如：`FORMAT_PRICE`。
 
 其他：在js文件中，省略语句后面分号，提升可读性。对于使用次数不超过两次的值，不单独设置变量。在方法中，对于不同类型的语句，使用空行分隔，便于阅读。CSS属性排列顺序为：绝对定位>flex定位>float定位>width/height>padding/margin>border>background>font相关>特殊属性。
 
